@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/PricingToggleComponen/static/css/main.66ff40fc.css",
+    "main.js": "/PricingToggleComponen/static/js/main.b32d5956.js",
+    "static/js/787.13ace30f.chunk.js": "/PricingToggleComponen/static/js/787.13ace30f.chunk.js",
+    "static/media/bg-bottom.svg": "/PricingToggleComponen/static/media/bg-bottom.0ed1debdb05aee57e642.svg",
+    "index.html": "/PricingToggleComponen/index.html",
+    "main.66ff40fc.css.map": "/PricingToggleComponen/static/css/main.66ff40fc.css.map",
+    "main.b32d5956.js.map": "/PricingToggleComponen/static/js/main.b32d5956.js.map",
+    "787.13ace30f.chunk.js.map": "/PricingToggleComponen/static/js/787.13ace30f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.66ff40fc.css",
+    "static/js/main.b32d5956.js"
+  ]
+}
