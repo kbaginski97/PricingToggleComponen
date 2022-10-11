@@ -1,0 +1,178 @@
+body {
+    background-image: url("../images/bg-bottom.svg");
+    background-color: hsl(240, 78%, 98%);
+}
+
+.container {
+    h1 {
+        text-align: center;
+        color: hsl(232, 13%, 33%);
+        margin-top: 100px;
+    }
+
+    .price-switch {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        span {
+            font-family: $primary-font;
+            color: hsl(234, 14%, 74%);
+            font-weight: bold;
+        }
+
+        .switch {
+            position: relative;
+            width: 70px;
+            height: 34px;
+            display: inline-block;
+            margin-inline: 30px;
+
+            .input[type=checkbox] {
+                opacity: 0;
+                width: 0;
+                height: 0;
+            }
+
+            .slider {
+                position: absolute;
+                cursor: pointer;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: #ccc;
+                transition: 0.3s;
+                border-radius: 34px;
+                background: linear-gradient(to left, hsl(236, 72%, 79%) 100%, hsl(237, 63%, 64%) 0%);
+
+                &::before {
+                    position: absolute;
+                    content: " ";
+                    height: 26px;
+                    width: 26px;
+                    right: 4px;
+                    bottom: 4px;
+                    background-color: white;
+                    transition: 0.3s;
+                    border-radius: 50%;
+
+                }
+            }
+        }
+
+        input:checked+.slider {
+            background: linear-gradient(to left, hsl(236, 72%, 79%) 0%, hsl(237, 63%, 64%) 100%);
+        }
+
+        input:checked+.slider:before {
+            transform: translateX(-32px);
+            transition: 0.3s;
+        }
+    }
+
+    .subscription-items-holder {
+        display: flex;
+        margin: 100px auto;
+        justify-content: center;
+
+        @media all and (max-width:1200px) {
+            flex-direction: column;
+            margin: 50px auto;
+        }
+
+        .subscription-item {
+            width: 400px;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: #fff;
+            border-radius: 10px;
+            font-family: $primary-font;
+            font-weight: bold;
+            color: $primary-color;
+            margin-top: 20px;
+
+            hr {
+                width: 70%;
+                opacity: 0.5;
+                margin-block: 20px;
+            }
+
+            h2 {
+                font-size: 40px;
+                margin-block: 15px;
+            }
+
+            .btn-sub {
+                margin-top: 20px;
+                width: 70%;
+                height: 40px;
+                background: linear-gradient(to right, hsl(236, 72%, 79%) 0%, hsl(237, 63%, 64%) 100%);
+                border: none;
+                font-family: $primary-font;
+                font-size: 14px;
+                font-weight: 400;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                color: hsl(240, 78%, 98%);
+                border-radius: 10px;
+
+                &:hover {
+                    cursor: pointer;
+                    background: #fff;
+                    color: hsl(232, 13%, 33%);
+                    border: 0.5px solid hsl(232, 13%, 33%);
+                }
+            }
+
+            .active-btn {
+                background: #fff;
+                margin-top: 30px;
+                width: 70%;
+                height: 40px;
+                border: none;
+                font-family: $primary-font;
+                font-size: 14px;
+                font-weight: 400;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                color: hsl(232, 13%, 33%);
+                border-radius: 10px;
+
+                &:hover {
+                    cursor: pointer;
+                    color: #fff;
+                    background: linear-gradient(to right, hsl(236, 72%, 79%) 0%, hsl(237, 63%, 64%) 100%);
+                    border: 1px solid #fff;
+                }
+            }
+
+            @media all and (max-width:1200px) {
+                margin-inline: auto;
+                margin-block: 10px;
+            }
+            @media all and (max-width:500px) {
+                width: 350px;
+            }
+        }
+
+        .active {
+            height: 550px;
+            background: linear-gradient(to left top, hsl(236, 72%, 79%) 0%, hsl(237, 63%, 64%) 100%);
+            color: #fff;
+            margin-top: 0;
+
+            hr {
+                hr {
+                    width: 70%;
+                    opacity: 0.5;
+                    margin-block: 10px;
+                }
+            }
+        }
+    }
+}

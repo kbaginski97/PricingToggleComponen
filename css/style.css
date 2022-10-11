@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+body {
+  background-image: url("../images/bg-bottom.svg");
+  background-color: hsl(240deg, 78%, 98%);
+}
+
+.container h1 {
+  text-align: center;
+  color: hsl(232deg, 13%, 33%);
+  margin-top: 100px;
+}
+.container .price-switch {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .price-switch span {
+  font-family: "Montserrat", sans-serif;
+  color: hsl(234deg, 14%, 74%);
+  font-weight: bold;
+}
+.container .price-switch .switch {
+  position: relative;
+  width: 70px;
+  height: 34px;
+  display: inline-block;
+  margin-inline: 30px;
+}
+.container .price-switch .switch .input[type=checkbox] {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.container .price-switch .switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.3s;
+  border-radius: 34px;
+  background: linear-gradient(to left, hsl(236deg, 72%, 79%) 100%, hsl(237deg, 63%, 64%) 0%);
+}
+.container .price-switch .switch .slider::before {
+  position: absolute;
+  content: " ";
+  height: 26px;
+  width: 26px;
+  right: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.3s;
+  border-radius: 50%;
+}
+.container .price-switch input:checked + .slider {
+  background: linear-gradient(to left, hsl(236deg, 72%, 79%) 0%, hsl(237deg, 63%, 64%) 100%);
+}
+.container .price-switch input:checked + .slider:before {
+  transform: translateX(-32px);
+  transition: 0.3s;
+}
+.container .subscription-items-holder {
+  display: flex;
+  margin: 100px auto;
+  justify-content: center;
+}
+@media all and (max-width: 1200px) {
+  .container .subscription-items-holder {
+    flex-direction: column;
+    margin: 50px auto;
+  }
+}
+.container .subscription-items-holder .subscription-item {
+  width: 400px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  color: hsl(233deg, 13%, 49%);
+  margin-top: 20px;
+}
+.container .subscription-items-holder .subscription-item hr {
+  width: 70%;
+  opacity: 0.5;
+  margin-block: 20px;
+}
+.container .subscription-items-holder .subscription-item h2 {
+  font-size: 40px;
+  margin-block: 15px;
+}
+.container .subscription-items-holder .subscription-item .btn-sub {
+  margin-top: 20px;
+  width: 70%;
+  height: 40px;
+  background: linear-gradient(to right, hsl(236deg, 72%, 79%) 0%, hsl(237deg, 63%, 64%) 100%);
+  border: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: hsl(240deg, 78%, 98%);
+  border-radius: 10px;
+}
+.container .subscription-items-holder .subscription-item .btn-sub:hover {
+  cursor: pointer;
+  background: #fff;
+  color: hsl(232deg, 13%, 33%);
+  border: 0.5px solid hsl(232deg, 13%, 33%);
+}
+.container .subscription-items-holder .subscription-item .active-btn {
+  background: #fff;
+  margin-top: 30px;
+  width: 70%;
+  height: 40px;
+  border: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: hsl(232deg, 13%, 33%);
+  border-radius: 10px;
+}
+.container .subscription-items-holder .subscription-item .active-btn:hover {
+  cursor: pointer;
+  color: #fff;
+  background: linear-gradient(to right, hsl(236deg, 72%, 79%) 0%, hsl(237deg, 63%, 64%) 100%);
+  border: 1px solid #fff;
+}
+@media all and (max-width: 1200px) {
+  .container .subscription-items-holder .subscription-item {
+    margin-inline: auto;
+    margin-block: 10px;
+  }
+}
+@media all and (max-width: 500px) {
+  .container .subscription-items-holder .subscription-item {
+    width: 350px;
+  }
+}
+.container .subscription-items-holder .active {
+  height: 550px;
+  background: linear-gradient(to left top, hsl(236deg, 72%, 79%) 0%, hsl(237deg, 63%, 64%) 100%);
+  color: #fff;
+  margin-top: 0;
+}
+.container .subscription-items-holder .active hr hr {
+  width: 70%;
+  opacity: 0.5;
+  margin-block: 10px;
+}/*# sourceMappingURL=style.css.map */
